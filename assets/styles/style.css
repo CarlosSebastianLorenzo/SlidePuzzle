@@ -12,8 +12,8 @@ body{
 }
 main{
     margin: .5em;
-    height: clamp(400px,80vw,100em);
-    width: clamp(400px,80vw,100em);
+    height: clamp(360px,80vw,55em);
+    width: clamp(360px,80vw,55em);
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
