@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(gray,black);
+}
+main{
+    margin: .5em;
+    height: clamp(400px,80vw,100em);
+    width: clamp(400px,80vw,100em);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: lightgray solid 2px;
+    border-left: lightgray solid 2px;
+    border-bottom: gray solid 5px;
+    border-right: black solid 5px;
+    background: linear-gradient(black,gray,black);
+    box-shadow: 8px 8px 8px black
+}
+.img{
+    border-top: lightgray solid 1px;
+    border-left: lightgray solid 1px;
+    border-bottom: black solid 5px;
+    border-right: black solid 5px;
+    background-image: url(https://newscenter.vteximg.com.br/arquivos/ids/208220-1000-1000/Mosaico---Carimbras.png?v=637336194682670000);
+    background-size: 300% 300%;
+}
+.clas1{
+    background-position: top left;
+}
+.clas2{
+    background-position: top center;
+}
+.clas3{
+    background-position: top right;
+}
+.clas4{
+    background-position: center left;
+}
+.clas5{
+    background-position: center center;
+}
+.clas6{
+    background-position: center right;
+}
+.clas7{
+    background-position: bottom left;
+}
+.clas8{
+    background-position: bottom center;
+}
+.clas9{
+    background-position: bottom right;
+}
