@@ -1,4 +1,4 @@
-let $main = document.getElementsByTagName('main')[0];
+let $puzzle = document.getElementById('puzzle');
 
 let obj = {}
 let sections = [];
@@ -20,17 +20,17 @@ sections.forEach(e=>{
     div.classList.add('clas'+i);
     div.style.gridRow = e.gridRow
     div.style.gridColumn = e.gridColumn
-    $main.appendChild(div);
+    $puzzle.appendChild(div);
     i++
 })
 let div = document.createElement('div');
     div.setAttribute('id','empty');
     div.style.gridRow = "3/4"
     div.style.gridColumn = "3/4"
-    $main.appendChild(div);
+    $puzzle.appendChild(div);
 
 let $empty = document.getElementById('empty')
-$main.addEventListener('click', function(e){
+$puzzle.addEventListener('click', function(e){
 
     let targetRowStart =  parseInt(e.target.style.gridRowStart);
     let targetRowEnd =  parseInt(e.target.style.gridRowEnd);

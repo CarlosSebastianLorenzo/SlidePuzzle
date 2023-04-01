@@ -5,15 +5,33 @@
 }
 body{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: radial-gradient(gray,black);
 }
+header{
+    height: 10vh;
+    padding-top: 1em;
+    text-align: center;
+}
+header>h1{
+    color: lightgray;
+    text-shadow: 1px 1px 8px gray;
+}
+header>form{
+    padding-top: 1em;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
 main{
-    margin: .5em;
-    height: clamp(360px,80vw,55em);
-    width: clamp(360px,80vw,55em);
+    min-height: 78vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#puzzle{
+    height: clamp(360px,80vw,35em);
+    width: clamp(360px,80vw,35em);
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -22,7 +40,7 @@ main{
     border-bottom: gray solid 5px;
     border-right: black solid 5px;
     background: linear-gradient(black,gray,black);
-    box-shadow: 8px 8px 8px black
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5)
 }
 .img{
     border-top: lightgray solid 1px;
@@ -58,4 +76,76 @@ main{
 }
 .clas9{
     background-position: bottom right;
+}
+footer{
+    height: 12vh;
+    text-align: center;
+}
+.socialMedia{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+    align-items: center;
+}
+.line{
+    width: 30vw;
+    background-color: lightgray;
+    border-radius: 20px;
+    height: 2px;
+}
+.socialMedia>a{
+    text-decoration: none;
+}
+.socialMedia>a{
+    translate: 0 20%;
+}
+.socialMedia>a>svg{
+    position: relative;
+    fill: lightgray;
+    stroke-width: 12;
+    height: 2em;
+    cursor: pointer;
+}
+.socialMedia>a>p{
+    color: gray;
+    opacity: 0;
+}
+.socialMedia>a>svg:hover{
+    animation: dasharray 3s linear infinite alternate;
+    stroke: white;
+    scale: 1.1;
+    transition: 1s;
+}
+@keyframes dasharray {
+    from{ 
+        stroke-dasharray: 300;
+    }
+    to{
+        stroke-dasharray: 650;
+    }
+}
+.socialMedia>a>svg:hover~p{
+    opacity: 1;
+    transition: 1s;
+}
+.socialMedia>svg:not(hover),footer>svg:not(hover)~p{
+    transition: 1s;
+}
+footer>p{
+    padding: .2em;
+    color: dimgray;
+}
+@media (max-width: 600px) {
+    main{
+        padding-top: 8vh;
+        min-height: 72vh;
+    }
+    .socialMedia{
+        gap: 0;
+        padding-bottom: .2em;
+    }
+    .socialMedia>a>svg{
+        height: 1.5em;
+    }
 }
